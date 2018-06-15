@@ -9,7 +9,7 @@ build:
     - script:
         name: go get
         code: |
-          go get github.com/shen-buding/go_test
+          go get github.com/shen-buding/wercker_test
     # Build the project
     - script:
         name: go build
