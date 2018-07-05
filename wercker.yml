@@ -21,9 +21,9 @@ build:
         code: |
           go test ./...
     - script:
-        name: Dockerfile Build
+        name: copy files to wercker output
         code: |
-          docker build -t coderss/web .
+          cp -R ./ ${WERCKER_OUTPUT_DIR}
 
     - internal/docker-push:
             username: $USERNAME
