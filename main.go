@@ -13,5 +13,4 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 func main()  {
 	http.HandleFunc("/", IndexHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
-
 }
