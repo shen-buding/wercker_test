@@ -1,8 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
 
-func main(){
-	fmt.Print("hello")
-	fmt.Print("hello Push")
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "<h1>hello world</h1>")
+}
+
+func main()  {
+	http.HandleFunc("/", IndexHandler)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
