@@ -2,4 +2,14 @@ pipeline:
   build:
     image: golang
     commands:
-      - go build main.go
+      - GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o wen main.go
+    when:
+      branch: master
+  deploy:
+    image: plugins/docker
+    repo: swqqh/drone-test # docker仓库地址
+    secrets: [ "swqqh", "swqqh@qq.com" ]
+    tags:
+      - test
+    when:
+      branch: develop
