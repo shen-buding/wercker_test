@@ -1,5 +1,5 @@
 workspace:
-  base: /Users/mac/Desktop/some_go_app/src/someProject
+  base: /
   path: .
 
 pipeline:
