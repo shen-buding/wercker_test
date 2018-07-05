@@ -1,5 +1,5 @@
 workspace:
-  base: /srv/drone-demo
+  base: /Users/mac/Desktop/some_go_app/src/someProject
   path: .
 
 pipeline:
