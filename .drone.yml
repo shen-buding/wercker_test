@@ -8,8 +8,8 @@ pipeline:
   deploy:
     image: plugins/docker
     repo: swqqh/drone-test # docker仓库地址
-    secrets: [ "swqqh", "swqqh@qq.com" ]
-    tags:
-      - test
+    username: swqqh
+    password: swqqh@qq.com
+  tag: ${DRONE_COMMIT_BRANCH##deployed/}-${DRONE_COMMIT_SHA:0:8}
     when:
       branch: master
