@@ -2,7 +2,7 @@ pipeline:
   build:
     image: golang
     commands:
-      - GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o wen main.go
+      - GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o web main.go
     when:
       branch: master
   deploy:
