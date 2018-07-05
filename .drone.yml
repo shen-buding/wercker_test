@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   build:
-     image: scratch
+     image: golang:alpine
      # pull: true
      environment:
        - KEY=VALUE
